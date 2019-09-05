@@ -1,0 +1,8 @@
+<div>
+    <div class="test-container">
+        <div *ngFor="let question of questions">
+            <app-quote [question]="question"></app-quote>
+        </div>
+    </div>
+    <button *ngIf="dataService.numberCorrect === 8" class="submit-button" mat-raised-button color="accent" [disabled]="submitted" (click)="submitAnswers()">Submit Answers</button>
+</div>

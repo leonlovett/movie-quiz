@@ -1,0 +1,60 @@
+<div class="browser-test-wrapper">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                <h3>Browser Testing</h3>
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="kickoff-test">
+                <mat-form-field>
+                    <mat-label>Number of times to run test with browser</mat-label>
+                    <mat-select [(ngModel)]="testQuantity">
+                        <mat-option *ngFor="let quantity of quantities" [value]="quantity">{{ quantity }}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <button mat-raised-button color="primary" [disabled]="!testQuantity" (click)="runBrowserTests()">Run
+                    Test</button>
+            </div>
+            <div class="test-results">
+                <mat-accordion>
+                    <mat-expansion-panel *ngFor="let testResult of testResults; let idx = index;">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>Test {{ idx + 1 }}</mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <div class="results" *ngFor="let result of testResult; let i = index;">
+                            <div
+                                [ngClass]="{ quote: true, correct: result.quote.id === result.answer.id, incorrect: result.quote.id !== result.answer.id }">
+                                {{ result.quote.text }}</div>
+                            <div
+                                [ngClass]="{ answer: true, correct: result.quote.id === result.answer.id, incorrect: result.quote.id !== result.answer.id }">
+                                {{ result.answer.text }}</div>
+                        </div>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>
+<div class=" stats-wrapper">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                <h3>Number of Connected Clients</h3>
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="big-number">{{ numberOfConnectedClients }}</div>
+        </mat-card-content>
+    </mat-card>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                <h3>Number of Completed Tests</h3>
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="big-number">{{ numberOfCompletedTests }}</div>
+        </mat-card-content>
+    </mat-card>
+</div>

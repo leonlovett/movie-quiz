@@ -1,0 +1,24 @@
+<mat-card>
+    <mat-card-content>
+        <div class="row" [ngClass]="{ 'row__space-between': this.selectedMovie, 'row__center': !this.selectedMovie }">
+            <div *ngIf="this.selectedMovie" class="image-container">
+                <img width="100" [src]="imageUrl" />
+            </div>
+            <div class="column">
+                <div class="movie-quote">
+                    "{{ question.text }}"
+                </div>
+                <div *ngIf="selectedMovie" class="selected-movie">{{ selectedMovie.text }}</div>
+                <mat-form-field *ngIf="!selectedMovie" class="movie-select">
+                    <mat-label>Choose a Movie</mat-label>
+                    <mat-select [(ngModel)]="selected" (ngModelChange)="movieSelected($event)">
+                        <mat-option *ngFor="let answer of answers" [value]="answer.id">
+                            <div>{{ answer.text }}</div>
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <div *ngIf="wrong" class="wrong">Your answer is wrong. Try again.</div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

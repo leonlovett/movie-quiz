@@ -1,0 +1,54 @@
+.movie-quote {
+    text-align: center;
+    font-size: 1.3em;
+    margin: 8px;
+}
+
+.movie-select {
+    width: 100%;
+}
+
+.selected-movie {
+    text-align: center;
+    margin: 8px;
+    font-size: 1.1em;
+    color: green;
+}
+
+.wrong {
+    text-align: center;
+    margin: 5px;
+    font-size: 1.1em;
+    color: red;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.row-space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.row__space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.row__center {
+    display: flex;
+    justify-content: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.mat-card {
+    height: 149px;
+}
+
+.image-container {
+    width: 100px;
+}

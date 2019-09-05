@@ -1,16 +1,47 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from "@angular/forms";
+import { AngularFireModule } from "@angular/fire";
+import { AngularFirestoreModule } from "@angular/fire/firestore";
+import { environment } from "../environments/environment";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatToolbarModule, MatCardModule, MatButtonModule, MatInputModule, MatSelectModule, MatIconModule, MatSnackBarModule, MatExpansionModule } from "@angular/material";
+import { TestComponent } from './components/test/test.component';
+import { QuoteComponent } from './components/quote/quote.component';
+import { PresentersPageComponent } from './components/presenters-page/presenters-page.component';
+
+const matModules = [
+  MatToolbarModule,
+  MatCardModule,
+  MatButtonModule,
+  MatInputModule,
+  MatSelectModule,
+  MatIconModule,
+  MatSnackBarModule,
+  MatExpansionModule
+];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ToolbarComponent,
+    TestComponent,
+    QuoteComponent,
+    PresentersPageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    ...matModules,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
