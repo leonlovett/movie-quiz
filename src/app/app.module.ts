@@ -10,7 +10,14 @@ import { AppComponent } from './app.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatToolbarModule, MatCardModule, MatButtonModule, MatInputModule, MatSelectModule, MatIconModule, MatSnackBarModule, MatExpansionModule } from "@angular/material";
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatCardModule } from "@angular/material/card";
+import { MatButtonModule } from "@angular/material/button";
+import { MatInputModule } from "@angular/material/input";
+import { MatSelectModule } from "@angular/material/select";
+import { MatIconModule } from "@angular/material/icon";
+import { MatSnackBarModule } from "@angular/material/snack-bar";
+import { MatExpansionModule } from "@angular/material/expansion";
 import { TestComponent } from './components/test/test.component';
 import { QuoteComponent } from './components/quote/quote.component';
 import { PresentersPageComponent } from './components/presenters-page/presenters-page.component';
