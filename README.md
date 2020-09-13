@@ -1,6 +1,11 @@
-# TestAnswers
+# Movie Trivia
+Just a quick web application that shows Angular 10 working with Angular Material.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.1.
+## Install and run
+In command line run `git clone https://github.com/leonlovett/browser-machine-learning.git`. The repo will download into the directory `browser-machine-learning`.
+
+Run `cd browser-machine-learning`.
+Run `npm install`.
 
 ## Development server
 
