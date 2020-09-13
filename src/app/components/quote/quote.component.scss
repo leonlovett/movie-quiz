@@ -4,10 +4,6 @@
     margin: 8px;
 }
 
-.movie-select {
-    width: 100%;
-}
-
 .selected-movie {
     text-align: center;
     margin: 8px;
@@ -43,6 +39,7 @@
     display: flex;
     flex-direction: column;
     align-self: center;
+    width: 100%;
 }
 
 .mat-card {

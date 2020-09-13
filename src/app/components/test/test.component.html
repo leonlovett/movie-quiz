@@ -4,5 +4,5 @@
             <app-quote [question]="question"></app-quote>
         </div>
     </div>
-    <button *ngIf="dataService.numberCorrect === 8" class="submit-button" mat-raised-button color="accent" [disabled]="submitted" (click)="submitAnswers()">Submit Answers</button>
+    <app-progress></app-progress>
 </div>

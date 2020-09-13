@@ -21,6 +21,7 @@ import { MatExpansionModule } from "@angular/material/expansion";
 import { TestComponent } from './components/test/test.component';
 import { QuoteComponent } from './components/quote/quote.component';
 import { PresentersPageComponent } from './components/presenters-page/presenters-page.component';
+import { ProgressComponent } from './components/progress/progress.component';
 
 const matModules = [
   MatToolbarModule,
@@ -39,7 +40,8 @@ const matModules = [
     ToolbarComponent,
     TestComponent,
     QuoteComponent,
-    PresentersPageComponent
+    PresentersPageComponent,
+    ProgressComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,17 @@
+.container {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    color: green;
+}

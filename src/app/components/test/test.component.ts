@@ -10,28 +10,9 @@ import { DataService } from "../../services/data.service";
   templateUrl: './test.component.html',
   styleUrls: ['./test.component.scss']
 })
-export class TestComponent implements OnInit {
+export class TestComponent {
   questions: Array<any> = questions;
   selectedMovie: string;
   submitted: boolean = false;
 
-  constructor(public dataService: DataService, private snackBar: MatSnackBar, private db: AngularFirestore) { }
-
-  ngOnInit() {
-  }
-
-  submitAnswers() {
-    this.db.collection('answers')
-      .doc(this.dataService.clientId)
-      .set({
-        answers: this.dataService.answers
-      })
-      .then(() => {
-        this.snackBar.open('Thanks for participating!')
-          .afterOpened()
-          .subscribe(() => {
-            this.submitted = true;
-          })
-      })
-  }
 }
