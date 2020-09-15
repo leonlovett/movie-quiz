@@ -1,8 +1,7 @@
 <div>
     <div class="test-container">
-        <div *ngFor="let question of questions">
+        <div *ngFor="let question of questions" class="question">
             <app-quote [question]="question"></app-quote>
         </div>
     </div>
-    <app-progress></app-progress>
 </div>

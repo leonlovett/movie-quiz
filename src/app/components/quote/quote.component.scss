@@ -40,12 +40,19 @@
     flex-direction: column;
     align-self: center;
     width: 100%;
+    justify-content: space-between;
 }
 
 .mat-card {
-    height: 149px;
+    height: 150px;
 }
 
 .image-container {
     width: 100px;
+}
+
+.movie-select {
+    width: 90%;
+    position: absolute;
+    bottom: 5px;
 }

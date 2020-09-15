@@ -9,7 +9,11 @@ import { DataService } from "../../services/data.service";
 export class ProgressComponent implements OnInit {
 
   get score() {
-    return this.dataService.numberCorrect / this.dataService.answers.length || 0;
+    return this.dataService.numberCorrect / 8 || 0;
+  }
+
+  get status() {
+    return `${this.dataService.numberCorrect}/8 correct`;
   }
   constructor(public dataService: DataService) { }
 
